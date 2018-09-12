@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+  <title>@yield('title')</title>
   <meta charset="utf-8">
   <!-- InternetExplorerのブラウザではバージョンによって崩れることがあるので、互換表示をさせないために設定するmetaタグです。 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <link href="css/style.css" rel="stylesheet">
   <!-- オプションのテーマ -->
   <style>
+  @yield('style')
   .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -20,7 +22,7 @@
   </head>
 
 <body>
-  @secion('navbar')
+  @section('navbar')
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -40,8 +42,9 @@
   <div class="container">
     @yield('content')
   </div>
-  <div class="footer">
-  </div>
+  <footer>
+    <!-- フッター未作成 -->
+  </footer>
   <!-- /.container -->
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
