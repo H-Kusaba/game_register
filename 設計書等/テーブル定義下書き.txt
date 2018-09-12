@@ -1,0 +1,40 @@
+共通項目
+    id
+    created_at
+    updated_at
+    deleted_at
+ランキング記事テーブル
+    title
+    body
+    image
+    publisher_id
+    game_id
+提携記事テーブル()
+    id
+    title
+    body
+    image
+    addmission_flg
+    game_id
+    publisher_id
+制作元テーブル
+    conpany
+    person
+    tel
+    mail
+    password
+    url
+ゲームタイトルテーブル
+    title
+    category
+    publisher_id
+個人会員テーブル
+    age         //age?birth??
+    name
+    sex
+    mail
+    password
+事前登録テーブル
+    game_id
+    user_id
+
