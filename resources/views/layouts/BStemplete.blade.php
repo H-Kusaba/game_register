@@ -3,14 +3,14 @@
   <head>
   <title>@yield('title')</title>
   <meta charset="utf-8">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
   <!-- InternetExplorerのブラウザではバージョンによって崩れることがあるので、互換表示をさせないために設定するmetaタグです。 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- レスポンシブWebデザインを使うために必要なmetaタグです。 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrapテンプレート</title>
   <!-- コンパイルして圧縮された最新版の CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="/publiv/css/style.css" rel="stylesheet">
   <!-- オプションのテーマ -->
   <style>
   @yield('style')

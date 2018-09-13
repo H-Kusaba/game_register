@@ -4,15 +4,16 @@
 
 @section('style')
 .ranking-container {}
-.ranked-img {height: 20px; width: 20px; }
-.artc-content {padding: 5px; }
-.artc-img {margin-bottom: 10px; width: 100%; }
-.artc-p {text-align: center;}
+.ranked-img { height: 100px; width: 100px;}
+.artc-content { padding: 5px; }
+.artc-img { margin-bottom: 10px; width: 100%; }
+.artc-p { text-align: center;}
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     width: 80%;
     margin: auto;
 }
+#ofc-link { margin-top: 20px;}
 
 @endsection
 
@@ -63,17 +64,17 @@
         </div>
     <!--  DBでforeach -->
       <tbody>
-        @for ($i=0;$i < 6;$i++) 
+        @foreach ($rankings as $ranking)
         <tr>
-          <td class="ranked-img">
-            <img src="/image/noimage.png">
+          <td>
+            <img class="ranked-img img-rounded" src="{{$ranking->image}}">
           </td>
           <td>
-            <h4>ゲームタイトル</h4>
-            <p>説明文</p>
+            <h4>{{$ranking->rank}}. {{$ranking->title}}</h4>
+            <a href="{{$ranking->body}}" class="btn btn-info " id="ofc-link" role="button">AppStore公式ページ</a>
           </td>
         </tr>
-        @endfor
+        @endforeach
       </tbody>
   </table>
   </div>

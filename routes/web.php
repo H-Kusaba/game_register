@@ -18,7 +18,10 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'testController@index');
+Route::get('/getRanking', 'RankingController@get');
+//Route::get('/', 'RankingController@create');
 
+//ユーザー認証
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
