@@ -13,7 +13,7 @@
     width: 80%;
     margin: auto;
 }
-#ofc-link { margin-top: 20px;}
+#ofc-link {display: block; text-align: right; width: 150px;}
 
 @endsection
 
@@ -71,7 +71,10 @@
           </td>
           <td>
             <h4>{{$ranking->rank}}. {{$ranking->title}}</h4>
-            <a href="{{$ranking->body}}" class="btn btn-info " id="ofc-link" role="button">AppStore公式ページ</a>
+            <p>{{mb_substr($ranking->body, 1, 80)}}...<a href="#">詳細ページへ</a></p>
+          </td>
+          <td>
+            <a href="{{$ranking->url}}" class="btn btn-info" id="ofc-link" role="button">AppStore公式ページ</a>
           </td>
         </tr>
         @endforeach
