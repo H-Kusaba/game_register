@@ -14,25 +14,4 @@ class Ranking extends Model
         'rank' => 'required',
         'image' => 'required',
     );
-
-    public function getRank()
-    {
-        return $this->rank;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
-    public function getBody()
-    {
-        return $this->body;
-    }
-
 }

@@ -14,7 +14,7 @@
     margin: auto;
 }
 #ofc-link {display: block; text-align: right; width: 150px;}
-
+.todetail {text-align: right;}
 @endsection
 
 @section('navbar')
@@ -24,16 +24,16 @@
 @section('content')
 <div class="row">
   <div class="col-md-12">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="/image/largeimage.png">
-    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="/image/largeimage.png">
+      </div>
   </div>
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -67,11 +67,11 @@
         @foreach ($rankings as $ranking)
         <tr>
           <td>
-            <img class="ranked-img img-rounded" src="{{$ranking->image}}">
+          <a href="/RArticle?id={{$ranking->id}}"><img class="ranked-img img-rounded" src="{{$ranking->icon}}"></a>
           </td>
           <td>
-            <h4>{{$ranking->rank}}. {{$ranking->title}}</h4>
-            <p>{{mb_substr($ranking->body, 1, 80)}}...<a href="#">詳細ページへ</a></p>
+            <h4><a href="/RArticle?id={{$ranking->id}}">{{$ranking->rank}}. {{$ranking->title}}</a></h4>
+            <p>{{mb_substr($ranking->body, 1, 90)}}....   <a href="/RArticle?id={{$ranking->id}}">詳細ページへ</a></p>
           </td>
           <td>
             <a href="{{$ranking->url}}" class="btn btn-info" id="ofc-link" role="button">AppStore公式ページ</a>

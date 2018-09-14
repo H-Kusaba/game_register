@@ -17,8 +17,9 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'testController@index');
+Route::get('/', 'indexController@index');
 Route::get('/getRanking', 'RankingController@get');
+Route::get('/RArticle', 'indexController@ViewRankingDetail');
 //Route::get('/', 'RankingController@create');
 
 //ユーザー認証
